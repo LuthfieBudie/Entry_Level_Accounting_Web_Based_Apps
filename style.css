@@ -1,0 +1,400 @@
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f8fa;
+    font-size: 12px;
+}
+
+/* Pembungkus utama: Flexbox mendatar (Sidebar di kiri, Konten di kanan) */
+.page_wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #14141f;
+    color: white;
+    flex-shrink: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 14px;
+    box-sizing: border-box;
+}
+
+.sidebar_brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px 24px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 16px;
+}
+
+.brand_mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgb(216, 18, 18), #ff5b5b);
+    color: white;
+    font-size: 14px;
+}
+
+.brand_name {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+}
+
+.sidebar_menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sidebar_menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #9294a8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar_menu li a i {
+    width: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: inherit;
+}
+
+.sidebar_menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: white;
+}
+
+.sidebar_menu li a.active {
+    background-color: rgba(216, 18, 18, 0.15);
+    color: white;
+}
+
+.sidebar_menu li a.active i {
+    color: rgb(216, 18, 18);
+}
+
+.sidebar_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar_footer a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #9294a8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar_footer a i {
+    width: 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.sidebar_footer a:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: white;
+}
+
+.time_filter_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.time {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: #c4c4c4;
+    box-shadow: 0px 0px 2px rgba(69, 69, 69, 0.2);
+}
+
+.time a {    
+    color: black;
+    text-decoration: none;
+    margin-right: 8px;
+    padding-right: 12px;
+    font-size: 12px;
+    border-right: 1px solid #1e1e2d;
+}
+
+.time a:not(:last-child) {
+    border-right: 1px solid #999;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+
+.time a:last-child {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.custom i {
+    margin-right: 8px;
+}
+
+.filter {
+    gap: 10px;
+    display: flex;
+}
+
+.filter a i {
+    margin-right: 8px;
+}
+
+.filter a {
+    box-shadow: 0px 0px 2px rgba(69, 69, 69, 0.2);
+    color: black;
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #c4c4c4;
+    text-decoration: none;
+}
+
+.main_content {
+    flex: 1;
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.dashboard_title {
+    padding-bottom: 13px;
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 0;
+}
+
+.dashboard_title a {
+    margin-left: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ff5b5b;
+}
+
+.stat_container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.stat_card {
+    flex: 1;
+    min-width: 150px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #f7f7f7;
+}
+
+.charts {
+    display: flex;
+    gap: 10px;
+}
+
+.line_chart {
+    flex: 1;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #f7f7f7;
+}
+
+.bar_chart,
+.cluster_bar_chart {
+    flex: 1;
+    margin-top: 10px;
+    max-width: 220px;
+    min-height: 200px;
+    background-color: rgb(254, 254, 254);
+    border: 2px solid #f7f7f7;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.bottom_chart {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.bottom_bar_chart {
+    flex: 1;
+    margin-top: 10px;
+    min-width: 220px;
+    min-height: 200px;
+    background-color: rgb(254, 254, 254);
+    border: 2px solid #f7f7f7;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+/* Kontainer dropdown */
+.dropdown-menu-container {
+    list-style: none;
+    position: relative;
+}
+
+.dropdown-submenu {
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-submenu li a {
+    padding: 10px 15px;
+    display: block;
+    font-size: 14px;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.dropdown-submenu li a:hover {
+    color: #ffffff;
+}
+
+.dropdown-menu-container.open .dropdown-submenu {
+    max-height: 200px;
+}
+
+.dropdown-menu-container.open .dropdown-arrow {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.form_container {
+    margin-top: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.form_container h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #1e293b;
+}
+
+.form_group {
+    margin-bottom: 15px;
+}
+
+.form_label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.shuffle_icon {
+    color: #4f46e5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form_input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.submit_btn {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+}
+
+.journal_add{
+    margin-bottom: 70px;
+}
+
+.buttonsave{
+    gap: 20px   ;
+    display: flex;
+}
+
+
+@media print {
+    /* Sembunyikan seluruh elemen halaman secara default */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Tampilkan kembali khusus elemen tabel beserta isinya */
+    table, table * {
+        visibility: visible;
+    }
+
+    /* Posisikan tabel agar naik ke pojok kiri atas kertas */
+    table {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Sembunyikan kolom tombol Aksi (Edit & Hapus) saat dicetak */
+    td:last-child, th:last-child {
+        display: none !important;
+    }
+}
