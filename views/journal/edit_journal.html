@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Edit Jurnal</title>
+</head>
+<body>
+    <div class="page_wrapper">
+        <aside class="sidebar">
+            <div class="sidebar_brand">
+                <img src="" alt="">
+                <span class="brand_name">Company Name</span>
+            </div>
+            <ul class="sidebar_menu">
+                <li><a href="/views/dashboard/dashboard.html">Dashboard</a></li>
+                <li><a href="/views/group/table_group.html">Table Group</a></li>
+                <li><a href="/views/coa/table_Coa.html">Table COA</a></li> 
+                <li><a href="/views/journal/table_Journal.html" class="active">Table Journal</a></li>
+                <li><a href="/views/buku_besar/buku_besar.html">Buku Besar</a></li>
+            </ul>
+                
+            <div class="sidebar_footer">
+                <a href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+                <a href="#"><i class="fa-solid fa-circle-question"></i>Help</a>
+                <a href="#" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+            </div>
+        </aside>
+
+        <main class="main_content">
+            <div class="show_filter">
+                <p class="dashboard_title">Edit Jurnal <a href="table_Journal.html" class="fa-solid fa-arrows-rotate"></a></p>
+            </div>
+            
+            <div class="form_container">
+                <form id="editJournalForm">
+                    <input type="hidden" id="edit_id">
+
+                    <div class="form_group">
+                        <label class="form_label"><span>Tanggal</span></label>
+                        <input type="date" id="edit_tanggal" class="form_input" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label"><span>COA</span></label>
+                        <select id="edit_coa" class="form_input" required>
+                            <option value="">Pilih COA</option>
+                        </select>
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label"><span>Posisi (D/K)</span></label>
+                        <select id="edit_dk" class="form_input" required>
+                            <option value="D">Debet (D)</option>
+                            <option value="K">Kredit (K)</option>
+                        </select>
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label"><span>Nilai / Nominal</span></label>
+                        <input type="number" id="edit_nilai" class="form_input" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label"><span>Uraian</span></label>
+                        <input type="text" id="edit_uraian" class="form_input" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label"><span>User</span></label>
+                        <input type="text" id="edit_user" class="form_input" readonly style="background-color: #e2e8f0; cursor: not-allowed;">
+                    </div>
+
+                    <button type="submit" class="submit_btn">
+                        Simpan Perubahan
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="/views/journal/edit_journal.js"></script>
+</body>
+</html>

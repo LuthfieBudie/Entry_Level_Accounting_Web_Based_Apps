@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Tambah Produk Baru</title>
+</head>
+<body>
+    <div class="page_wrapper">
+        <aside class="sidebar">
+            <div class="sidebar_brand">
+                <img src="" alt="">
+                <span class="brand_name">Company Name</span>
+            </div>
+            <ul class="sidebar_menu">
+                <li><a href="/views/dashboard/dashboard.html" >Dashboard</a></li>
+                    <li><a href="/views/group/table_group.html" class="active">Table Group</a></li>
+                    <li><a href="/views/coa/table_Coa.html">Table COA</a></li> 
+                    <li><a href="/views/journal/table_Journal.html">Table Journal</a></li>
+                    <li><a href="/views/buku_besar/buku_besar.html">Buku Besar</a></li>
+            </ul>
+                
+            <div class="sidebar_footer">
+                <a href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+                <a href="#"><i class="fa-solid fa-circle-question"></i>Help</a>
+                <a href="#" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+            </div>
+        </aside>
+
+        <main class="main_content">
+            <div class="show_filter">
+                <p class="dashboard_title">Edit Kolom Grup<a href="add_group.html" class="fa-solid fa-arrows-rotate"></a></p>
+            </div>
+            
+            <div class="form_container">
+                    
+                <form id="addProductForm">
+                    <div class="form_group">
+                        <label class="form_label">
+                            <span>Ganti Kode</span>
+                        </label>
+                        <input type="text" id="add_code" class="form_input" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label" style="display: block;">Ganti Nama</label>
+                        <input type="text" id="add_name" class="form_input" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label" style="display: block;">Ganti Grup</label>
+                        <input type="text" id="add_group" class="form_input" required>
+                    </div>
+
+                    <button type="submit" class="submit_btn">
+                        Simpan Produk
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="/views/group/add_group.js"></script>
+</body>
+</html>
